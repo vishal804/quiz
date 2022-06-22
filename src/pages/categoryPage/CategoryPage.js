@@ -24,7 +24,7 @@ const CategoryPage = () => {
         Navigate("/");
       }
     })();
-  }, []);
+  }, [Navigate, quizDispatch]);
 
   return (
     <>
@@ -36,8 +36,11 @@ const CategoryPage = () => {
             className="category-card"
             onClick={() => Navigate(`/category/${category._id}`)}
           >
-            <img className="image-responsive" src={category.categoryImage} />
-
+            <img
+              className="image-responsive"
+              src={category.categoryImage}
+              alt="category"
+            />
             <div className="category-name">
               <div className="container-text">{category.categoryName}</div>
             </div>
