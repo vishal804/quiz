@@ -3,11 +3,11 @@
 }
 
 .selected {
-  background-color: red;
+  background-color: var(--red-color);
   color: var(--background-color);
 }
 .answer {
-  background-color: green;
+  background-color: var(--green-color);
   color: var(--background-color);
 }
 
