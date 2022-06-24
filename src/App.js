@@ -6,6 +6,8 @@ import {
   CategoryPage,
   HomePage,
   QuizListingPage,
+  QuizPage,
+  ResultPage,
   RulePage,
   Signin,
   Signup,
@@ -22,6 +24,8 @@ function App() {
 
         <Route element={<PrivateRoutes />}>
           <Route path="/rules/:quizId" element={<RulePage />} />
+          <Route path="/questions/:quizId/:questionId" element={<QuizPage />} />
+          <Route path="/result/:quizId" element={<ResultPage />} />
         </Route>
 
         <Route path="/signin" element={<Signin />} />

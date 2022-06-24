@@ -1,0 +1,46 @@
+.background-color {
+  background-color: var(--secondary-hover-color);
+}
+
+.selected {
+  background-color: red;
+  color: var(--background-color);
+}
+.answer {
+  background-color: green;
+  color: var(--background-color);
+}
+
+.display-btn-style {
+  font-size: 1rem;
+  cursor: pointer;
+  list-style: none;
+  text-align: center;
+}
+
+.sm-title {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.sm-container {
+  margin: 1rem 0;
+  width: 100%;
+  background-color: var(--container-background-color);
+  padding: 2rem 5rem;
+}
+
+.mid-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  width: 71%;
+}
+
+@media screen and (max-width: 768px) {
+  .sm-container {
+    padding: 0;
+  }
+}
