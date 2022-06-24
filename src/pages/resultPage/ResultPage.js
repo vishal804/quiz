@@ -10,7 +10,9 @@ const ResultPage = () => {
   return (
     <>
       {isFeching ? (
-        console.log("THIS IS  FECHING Wait")
+        <div className="loading">
+          <i className="fas fa-sync fa-spin fa-5x"></i>
+        </div>
       ) : (
         <div className="result-container">
           <div className="category-title">Final Scorecard</div>

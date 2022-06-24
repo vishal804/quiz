@@ -30,27 +30,27 @@ const QuizListingPage = () => {
     <>
       <div className="category-title">Select Quiz</div>
       <div className="category-container">
-        {filterQuiz.map((quizOne) => (
-          <div class="card">
-            <div class="card-image-container">
+        {filterQuiz.map((quizOne, index) => (
+          <div className="card" key={index}>
+            <div className="card-image-container">
               <img
-                class="image-responsive"
+                className="image-responsive"
                 src={quizOne.quizImage}
                 alt="card"
               />
             </div>
-            <div class="card-container">
+            <div className="card-container">
               <div>
-                <p class="quiz-title">{quizOne.title}</p>
-                <p class="quiz-subtitle">{quizOne.description}</p>
+                <p className="quiz-title">{quizOne.title}</p>
+                <p className="quiz-subtitle">{quizOne.description}</p>
 
                 <ul className="list-style">
                   <li>5 questions</li>
                 </ul>
               </div>
-              <div class="card-btn-container">
+              <div className="card-btn-container">
                 <button
-                  class="btn btn-primary btn-lg"
+                  className="btn btn-primary btn-lg"
                   onClick={() => Navigate(`/rules/${quizOne._id}`)}
                 >
                   Start Quiz

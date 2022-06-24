@@ -45,7 +45,9 @@ const QuestionCard = ({ quiz }) => {
   return (
     <>
       {isLoading ? (
-        console.log("Please Wait")
+        <div className="loading">
+          <i className="fas fa-sync fa-spin fa-5x"></i>
+        </div>
       ) : (
         <>
           <div className="questions-container">

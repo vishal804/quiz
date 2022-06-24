@@ -32,7 +32,9 @@ const QuizPage = () => {
   return (
     <>
       {isFeching ? (
-        console.log("Wait")
+        <div className="loading">
+          <i className="fas fa-sync fa-spin fa-5x"></i>
+        </div>
       ) : (
         <div>
           {currentQuestion && (

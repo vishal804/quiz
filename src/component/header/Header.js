@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <>
       {/* Header Navigation */}
-      <header>
+      <header className="nav">
         <nav className="navbar box-shadow">
           <div className="left-navbar">
             <div>
