@@ -30,7 +30,6 @@ const QuestionCard = ({ quiz }) => {
         quizDispatch({ type: "SET_QUESTION", payload: response.data.question });
       } catch (error) {
         Navigate("/");
-        console.log(error);
       }
     })();
   }, [Navigate, quizDispatch, quizId, questionId, token]);
