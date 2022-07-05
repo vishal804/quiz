@@ -3,6 +3,15 @@
   padding: 0.5rem 1rem;
 }
 
+.nav {
+  position: sticky;
+  top: 0;
+}
+
+.navbar {
+  background-color: var(--background-color);
+}
+
 .right-navbar {
   align-items: center;
 }

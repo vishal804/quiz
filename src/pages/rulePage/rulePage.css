@@ -1,0 +1,27 @@
+.rule-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.rule-wrapper-container {
+  background-color: var(--container-background-color);
+  padding: 2rem 5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.list-element {
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .rule-wrapper-container {
+    padding: 0;
+  }
+}
