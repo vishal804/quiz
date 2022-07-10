@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./auth.css";
 import axios from "axios";
 import { useAuth } from "../../context/auth-context";
+import { ErrorToast, SuccessToast } from "../../component";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const Signin = () => {
@@ -29,8 +30,9 @@ const Signin = () => {
         },
       });
       navigate(from, { replace: true });
+      SuccessToast("Login successful");
     } catch (error) {
-      console.log("Error", error);
+      ErrorToast("Invalid username and password", error);
     }
   };
 
@@ -50,8 +52,9 @@ const Signin = () => {
         },
       });
       navigate(from, { replace: true });
+      SuccessToast("Login successful");
     } catch (error) {
-      console.log("Error", error);
+      ErrorToast("Invalid username and password", error);
     }
   };
 
