@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./quizListingPage.css";
 import axios from "axios";
 import { useQuiz } from "../../context/quiz-context";
+import { ErrorToast } from "../../component";
 import { useNavigate, useParams } from "react-router-dom";
 
 const QuizListingPage = () => {
@@ -19,7 +20,7 @@ const QuizListingPage = () => {
         quizDispatch({ type: "SET_GET_QUIZ", payload: response.data.quizes });
       } catch (error) {
         Navigate("/");
-        console.log(error);
+        ErrorToast("Seems like error", error);
       }
     })();
   }, [Navigate, quizDispatch]);

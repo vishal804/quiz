@@ -3,6 +3,7 @@ import "./questionCard.css";
 import axios from "axios";
 import { useAuth } from "../../context/auth-context";
 import { useQuiz } from "../../context/quiz-context";
+import { ErrorToast } from "../../component";
 import { Link, useParams, useNavigate } from "react-router-dom";
 
 const QuestionCard = ({ quiz }) => {
@@ -30,6 +31,7 @@ const QuestionCard = ({ quiz }) => {
         quizDispatch({ type: "SET_QUESTION", payload: response.data.question });
       } catch (error) {
         Navigate("/");
+        ErrorToast("Seems like error", error);
       }
     })();
   }, [Navigate, quizDispatch, quizId, questionId, token]);

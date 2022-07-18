@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./auth.css";
 import axios from "axios";
 import { useAuth } from "../../context/auth-context";
+import { ErrorToast, SuccessToast } from "../../component";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const Signup = () => {
@@ -43,9 +44,10 @@ const Signup = () => {
             },
           });
           navigate(from, { replace: true });
+          SuccessToast("Login successful");
         }
       } catch (error) {
-        console.log("Error", error);
+        ErrorToast("Invalid username and password", error);
       }
     } else if (userCredentials.password.length <= 9) {
       setError("Password required altest 9 Character");

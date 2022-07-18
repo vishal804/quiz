@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./quizPage.css";
 import axios from "axios";
 import { QuestionCard } from "../../component";
+import { ErrorToast } from "../../component";
 import { useQuiz } from "../../context/quiz-context";
 import { useAuth } from "../../context/auth-context";
 import { useNavigate, useParams } from "react-router-dom";
@@ -24,7 +25,7 @@ const QuizPage = () => {
         quizDispatch({ type: "SET_QUIZ", payload: response.data.quiz });
       } catch (error) {
         Navigate("/");
-        console.log(error);
+        ErrorToast("Seems like error", error);
       }
     })();
   }, [Navigate, quizDispatch, quizId, token]);

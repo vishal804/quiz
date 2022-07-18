@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./categoryPage.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { ErrorToast } from "../../component";
 import { useQuiz } from "../../context/quiz-context";
 
 const CategoryPage = () => {
@@ -20,8 +21,8 @@ const CategoryPage = () => {
           payload: response.data.categories,
         });
       } catch (error) {
-        console.log("Seems like error in feching");
         Navigate("/");
+        ErrorToast("Seems like error", error);
       }
     })();
   }, [Navigate, quizDispatch]);
