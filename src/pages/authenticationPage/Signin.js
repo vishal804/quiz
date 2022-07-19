@@ -147,7 +147,7 @@ const Signin = () => {
               Guest Login
             </button>
             <div className="create-account flex flex-center">
-              <Link to="/signup">
+              <Link to="/signup" state={{ from: from }}>
                 <p>Don't have account? Create now</p>
               </Link>
             </div>
