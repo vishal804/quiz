@@ -67,12 +67,10 @@ const Signin = () => {
             password: "",
           }}
           validate={(values) => {
-            console.log({ values });
             const errors = {};
             if (!values.password.trim()) {
               errors.password = "Required";
             }
-
             if (!values.email) {
               errors.email = "Required";
             } else if (
@@ -80,7 +78,6 @@ const Signin = () => {
             ) {
               errors.email = "Invalid email address";
             }
-
             return errors;
           }}
         >
