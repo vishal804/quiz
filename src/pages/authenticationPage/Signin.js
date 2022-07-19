@@ -96,7 +96,11 @@ const Signin = () => {
                 placeholder="Enter Email"
                 name="email"
               />
-              <ErrorMessage name="email" component="div" />
+              <ErrorMessage
+                className="error-message"
+                name="email"
+                component="div"
+              />
             </div>
 
             <div>
@@ -120,7 +124,11 @@ const Signin = () => {
                   show
                 </div>
               </div>
-              <ErrorMessage name="password" component="div" />
+              <ErrorMessage
+                className="error-message"
+                name="password"
+                component="div"
+              />
             </div>
 
             <div className="login-store flex flex-space-between">
