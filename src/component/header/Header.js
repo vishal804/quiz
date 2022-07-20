@@ -9,10 +9,9 @@ const Header = () => {
   const navigate = useNavigate();
 
   const logoutHandler = () => {
-    navigate("/");
-    localStorage.removeItem("userAuthToken");
-    localStorage.removeItem("user");
     authDispatch({ type: "LOGOUT" });
+    localStorage.clear();
+    navigate("/");
   };
 
   const loginHandler = () => {
